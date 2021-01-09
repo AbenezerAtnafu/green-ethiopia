@@ -14,6 +14,14 @@ module.exports = {
       description: {
         type: Sequelize.TEXT
       },
+      camp_id: {
+        type: Sequelize.INTEGER,
+        onDelete:"CASCADE",
+        references:{
+          model:'Campaigns',
+          key: 'id'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

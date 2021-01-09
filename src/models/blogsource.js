@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       BlogSource.belongsTo(models.Blog, {
         foreignKey:"blog_id",
         onDelete:"CASCADE"
-      })
+      });
     }
   };
   BlogSource.init({
@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       onDelete:"CASCADE",
       references:{
-        model:'Blog',
+        model:'Blogs',
         key: 'id'
       }
     }

@@ -1,2 +1,0 @@
-const { Op } = require("sequelize");
-const Blog = require("./models").Blog;

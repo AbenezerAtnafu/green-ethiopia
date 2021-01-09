@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Campaign.hasMany(models.CampaignImage, {
+        foreignKey:"camp_id",
+        as:'images'
+      });
     }
   };
   Campaign.init({

@@ -17,6 +17,14 @@ module.exports = {
       source_description: {
         type: Sequelize.TEXT
       },
+      blog_id: {
+        type: Sequelize.INTEGER,
+        onDelete:"CASCADE",
+        references:{
+          model:'Blogs',
+          key: 'id'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

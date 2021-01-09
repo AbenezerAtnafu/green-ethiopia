@@ -11,11 +11,23 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      CampaignImage.belongsTo(models.Campaign, {
+        foreignKey: "camp_id",
+        onDelete:"CASCADE"
+      });
     }
   };
   CampaignImage.init({
     url: DataTypes.STRING,
-    description: DataTypes.TEXT
+    description: DataTypes.TEXT,
+    camp_id: {
+      type: DataTypes.INTEGER,
+      onDelete:"CASCADE",
+      references:{
+        model:'Campaigns',
+        key: 'id'
+      }
+    }
   }, {
     sequelize,
     modelName: 'CampaignImage',
