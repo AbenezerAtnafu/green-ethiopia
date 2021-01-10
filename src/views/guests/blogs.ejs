@@ -9,97 +9,76 @@
         </div>
     </div>
 
-    <% if(blogs.length>0) {%>
-        <% blogs.forEach(function(blog){ %>
-                <!-- is search -->
-            <div class="content-wrapper">
-                <div class="greennature-content">
-
-                    <!-- Above Sidebar Section-->
-
-                    <!-- Sidebar With Content Section-->
-                    <div class="with-sidebar-wrapper">
-                        <div class="with-sidebar-container container">
-                            <div class="with-sidebar-left eight columns">
-                                <div class="with-sidebar-content twelve columns">
-                                    <section id="content-section-1">
-                                        <div class="section-container container">
-                                            <div class="blog-item-wrapper">
-                                                <div class="blog-item-holder">
-                                                    <div class="greennature-item greennature-blog-full">
-                                                        <div class="greennature-ux greennature-blog-full-ux">
-                                                            <article id="post-2211" class="post-2211 post type-post status-publish format-gallery has-post-thumbnail hentry category-blog category-life-style tag-blog tag-life-style post_format-post-format-gallery">
-                                                                <div class="greennature-standard-style">
-                                                                    <div class="greennature-blog-thumbnail greennature-gallery">
-                                                                        <div class="flexslider" data-pausetime="7000" data-slidespeed="600" data-effect="fade">
-                                                                            <ul class="slides">
-                                                                                <% blog.images.forEach((image) => { %>
-                                                                                    <li>
-                                                                                        <a href="#" data-fancybox-group="greennature-gal-1" data-rel="fancybox"><img src="/images/blogs/<%- image.url %>" alt="" width="750" height="330" /></a>
-                                                                                    </li>
-                                                                                <% }); %>
-                                                                                
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
+    <div class="m-5">
+        <% if(blogs.length>0) {%>
+            <% blogs.forEach(function(blog){ %>
     
-                                                                    <div class="greennature-blog-date-wrapper">
-                                                                        <div class="greennature-blog-day"><%= new Date(blog.createdAt).getFullYear(); %></div>
-                                                                        <div class="greennature-blog-month"><%= months[new Date(blog.createdAt).getMonth()] %></div>
-                                                                    </div>
-    
-                                                                    <div class="blog-content-wrapper">
-                                                                        <header class="post-header">
-                                                                            <h3 class="greennature-blog-title"><a href="/blogs/<%- blog.id %>"><%- blog.title %></a></h3>
-    
-                                                                            <div class="greennature-blog-info">
-                                                                               
-                                                                                <div class="blog-info blog-author greennature-skin-info"><i class="fa fa-pencil"></i><a href="#" title="Posts by John Maxwell" rel="author"><%- blog.writer %></a></div>
-                                                                                <div class="clear"></div>
-                                                                            </div>
-                                                                            <div class="clear"></div>
-                                                                        </header>
-                                                                        <!-- entry-header -->
-    
-                                                                        <div class="greennature-blog-content"><%- blog.description %>
-                                                                            <div class="clear"></div><a href="/blogs/<%- blog.id %>" class="excerpt-read-more">Read More</a></div>
-                                                                    </div>
-                                                                    <!-- blog content wrapper -->
-                                                                    <div class="clear"></div>
-                                                                </div>
-                                                            </article>
-                                                            <!-- #post -->
+                <div class="row ml-3 mr-3 mt-5 mb-5">
+                    <div class="col-sm-5 col-md-5 col-lg-5 block2-pic hov-img0">
+                        <div class="greennature-blog-thumbnail greennature-gallery">
+                            <div class="flexslider" data-pausetime="7000" data-slidespeed="600" data-effect="fade">
+                                <ul class="slides">
+                                    <% blog.images.forEach((image) => { %>
+                                        <li>
+                                            <a class="hov-img0 how-pos5-parent rs1 " href="/blogs/<%- blog.id %>" data-fancybox-group="greennature-gal-1" data-rel="fancybox">
+                                                <img class=" img-fluid" src="/images/blogs/<%- image.url %>" alt="" />
+                                            
+                                                <div class=" flex-col-c-m size-140 pt-2 pb-2 pl-3 pr-3 rounded bg-success how-pos5 time-container">
+                                                    <span class="stext-109 txt-center ">
+                                                        <div class=" bold text-light font-weight-bold text-lg">
+                                                            <div class="greennature-blog-day"><%= new Date(blog.createdAt).getFullYear(); %></div>
+                                                            <div class="greennature-blog-month text-uppercase"><%= months[new Date(blog.createdAt).getMonth()] %></div>
+                                                            
+                                                            
                                                         </div>
-                                                    </div>
-                                                    </div>
-                                                    
+                                                        
+    
+                                                    </span>
                                                 </div>
-                                                
-                                            </div>
-                                            <div class="clear"></div>
-                                        </div>
-                                    </section>
-                                </div>
-
-                                <div class="clear"></div>
+                                            </a>
+                                        </li>
+                                    <% }); %>
+                                    
+                                </ul>
                             </div>
-
-                            
-                            <div class="clear"></div>
+                        </div>
+    
+    
+                    </div>
+    
+                    <div class="col-md-7 col-lg-7 col-sm-7">
+                        <div class="blog-content-wrapper">
+                            <header class="post-header">
+                                <h3 class="greennature-blog-title text-capitalize"><a href="/blogs/<%- blog.id %>"><%- blog.title %></a></h3>
+    
+                                <div class="greennature-blog-info text-capitalize">
+                                   
+                                    <div class="blog-info blog-author greennature-skin-info"><i class="fa fa-pencil"></i><%- blog.writer %></div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+                            </header>
+                            <!-- entry-header -->
+    
+                            <div class="greennature-blog-content mt-2 mb-3 text-dark"><%- blog.description.substring(0, 300) %>
+                                <div class="clear"></div>
+                                
+                            </div>
+                            <div>
+                                <a href="/blogs/<%- blog.id %>" class="excerpt-read-more">Read More</a>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Below Sidebar Section-->
-
                 </div>
-                <!-- greennature-content -->
-                <div class="clear"></div>
-            </div>
-        <% }); %>
-
-    <%} else{  %>
-        <h1 class="">No Blogs Found!</h1>
-    <% } %> 
+                    <!-- is search -->
+                
+            <% }); %>
+    
+        <%} else{  %>
+            <h1 class="">No Blogs Found!</h1>
+        <% } %> 
+    </div>
+   
 
     <!-- load more -->
     <div class="greennature-pagination" style="padding-right:150px">

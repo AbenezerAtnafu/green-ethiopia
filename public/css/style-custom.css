@@ -119,7 +119,7 @@ table.style-2 tr:nth-child(even){ color: #949494; }
 .greennature-blog-title, .greennature-blog-title a{ color: #5dc269; }
 .greennature-blog-title a:hover{ color: #3f873e; }
 .greennature-blog-date-wrapper{ color: #4e4e4e; }
-.blog-info, .blog-info a, .blog-info i{ color: #b0b0b0; }
+.blog-info, .blog-info a, .blog-info i{ color: #b0b0b0; font-size: medium;}
 .greennature-blog-thumbnail .greennature-sticky-banner{ background-color: #232323; }
 .greennature-blog-thumbnail .greennature-sticky-banner, .greennature-blog-thumbnail .greennature-sticky-banner i{ color: #ffffff; }
 .greennature-social-share, .greennature-social-share a{ background-color: #f3f3f3; }
