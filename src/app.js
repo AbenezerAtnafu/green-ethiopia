@@ -15,6 +15,7 @@ const { errorHandler } = require("./controllers/error.controller");
 const publicViewsRouter = require("./routes/public-views.route")
 const blogRouter = require("./routes/blog.route");
 const campaignRouter = require("./routes/campaign.route");
+const adminRouter = require("./routes/admin-veiws.route");
 
 db.sequelize.sync().then(() => {
   console.log(chalk.cyan("Connected to database"));
@@ -35,6 +36,7 @@ app.set("view engine", "ejs");
 
 
 app.use('/', publicViewsRouter);
+app.use("/admin", adminRouter);
 app.use('/api/v1/blogs', blogRouter);
 app.use('/api/v1/campaigns', campaignRouter);
 

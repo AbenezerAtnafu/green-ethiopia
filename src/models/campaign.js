@@ -22,7 +22,9 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.TEXT,
     place: DataTypes.STRING,
     video_url: DataTypes.STRING,
-    join_us_url: DataTypes.STRING
+    join_us_url: DataTypes.STRING,
+    start_date: DataTypes.STRING,
+    end_date: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Campaign',
