@@ -61,6 +61,23 @@ type="text/javascript"
 ></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="/demo/demo.js"></script>
+<script src="/js/plugins/piexif.js" type="text/javascript"></script>
+<script src="/js/plugins/sortable.js" type="text/javascript"></script>
+<script src="/js/fileinput.js" type="text/javascript"></script>
+<script>
+  $("#file-3").fileinput({
+    theme: "fas",
+    showUpload: false,
+    showCaption: false,
+    browseClass: "btn btn-primary btn-lg",
+    fileType: "png jpg jpeg gif",
+    previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+    maxTotalFileCount: 6,
+    overwriteInitial: false,
+    initialPreviewAsData: true,
+  });
+</script>
+
 <script>
 $(document).ready(function () {
   $().ready(function () {
