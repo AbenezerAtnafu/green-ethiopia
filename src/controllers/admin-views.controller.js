@@ -66,6 +66,13 @@ const uploadCampaign = multer({
 exports.uploadBlogImage = uploadBlog.array("images", 6);
 exports.uploadCampaignImage = uploadCampaign.array("images", 6);
 
+exports.sessionChecker = (req, res, next) => {
+  if (!req.session.user || !req.cookies.user_sid) {
+    res.redirect("/login");
+  } else {
+    next();
+  }
+};
 /*
  * Users Section
 */ 

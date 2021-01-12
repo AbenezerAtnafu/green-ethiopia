@@ -3,6 +3,7 @@ const {
 } = require("sequelize");
 const Blog = require("../models").Blog;
 const Campaign = require("../models").Campaign;
+const User = require("../models").users;
 const {
   catchAsync
 } = require("./error.controller");
@@ -44,12 +45,7 @@ exports.renderMedia = catchAsync(async (req, res, next) => {
   res.render("guests/media");
 });
 
-exports.renderLogin = catchAsync(async (req, res, next) => {
-  res.render("guests/login");
-})
-// exports.renderBlogs = catchAsync(async (req, res, next) => {
-//   res.render("guests/blogs");
-// });
+
 
 //dynamic views render
 exports.renderBlogs = catchAsync(async (req, res, next) => {
@@ -116,3 +112,35 @@ exports.renderCampaign = catchAsync(async (req, res, next) => {
     months,
   })
 })
+
+// login and logout
+exports.renderLogin = catchAsync(async (req, res, next) => {
+  if (req.session.user && req.cookies.user_sid) {
+    res.redirect("/admin/blogs");
+  } else {
+    res.render("guests/login", {
+      error: null,
+    });
+  }
+});
+
+exports.login = catchAsync(async (req, res, next) => {
+  const { email, password } = req.body;
+  const user = await User.findOne({ where: { email } });
+  if (!user || !user.validPassword(password)) {
+    res.render("guests/login", {
+      error: "Invalid email/password",
+    });
+  } else {
+    req.session.user = user.dataValues;
+    res.redirect("/admin/blogs");
+  }
+});
+exports.logout = catchAsync(async (req, res, next) => {
+  if (req.session.user && req.cookies.user_sid) {
+    res.clearCookie("user_sid");
+    res.redirect("/");
+  } else {
+    res.redirect("/login");
+  }
+});

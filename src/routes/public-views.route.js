@@ -1,5 +1,7 @@
 const express = require("express");
 const {
+    login,
+    logout,
     renderLogin,
     renderHome,
     renderAbout,
@@ -13,6 +15,9 @@ const {
 const router = express.Router();
 
 router.get("/login",renderLogin);
+router.post("/login", login);
+router.get("/logout", logout);
+
 router.get("/", renderHome);
 router.get("/about", renderAbout);
 router.get("/contact-us", renderContactUs);
