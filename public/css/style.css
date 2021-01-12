@@ -215,7 +215,7 @@ html .woocommerce .greennature-widget-title { font-size: 12px; }
 
 .greennature-header-wrapper{ z-index: 99; }
 .greennature-logo-container,
-.greennature-header-container{ position: relative; z-index: 97; }
+.greennature-header-container{ position: relative; height: 120px; z-index: 97; }
 .greennature-logo{ float: left; margin-left: 0px; margin-right: 15px; }
 .greennature-logo h1{ margin-bottom: 0px; line-height: 0; }
 
@@ -1734,4 +1734,117 @@ right: 10px;
 	height: 70px;
 	background-color: #000;
 	transform: rotate(45deg);
+}
+
+/* Login page */
+
+.user_card {
+	height: 400px;
+	width: 350px;
+	margin-top: 240px;
+	margin-bottom: 20px;
+	background: #356933;
+	opacity: .9;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
+
+}
+
+@media only screen and (max-width: 767px){
+	.user_card{
+		margin-top: 80px;
+	}
+
+}
+
+@media (max-width:960px) and (min-width:768px){
+	.user_card{
+		margin-top: 330px;
+	}
+}
+
+@media (max-width:1087px) and (min-width:960px){
+	.user_card{
+		margin-top: 330px;
+	}
+}
+
+
+.brand_logo_container {
+	position: absolute;
+	height: 170px;
+	width: 170px;
+	top: -75px;
+	border-radius: 50%;
+	background: #8dc63f;
+	padding: 10px;
+	text-align: center;
+}
+.brand_logo {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+.form_container {
+	margin-top: 40px;
+}
+.login_btn {
+	width: 100%;
+	background: #f39c12;
+	color: white;
+}
+.login_container button{
+	transition: .4s;
+}
+
+.login_btn:hover{
+	background-color: #4CAF50;
+}
+
+.login_btn:focus {
+	box-shadow: none !important;
+	outline: 0px !important;
+}
+
+.login_container {
+	padding: 0 2rem;
+}
+.input-group-text {
+	background: #f39c12;
+	color: white;
+	width: 40px;
+	border: 0;
+	border-radius: 0.25rem 0 0 0.25rem !important;
+	justify-content:center;
+}
+.input_user,
+.input_pass:focus {
+	box-shadow: none !important;
+	outline: 0px !important;
+}
+.custom-control-label{
+	color: white;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+	background-color: #107d63;
+}
+
+#background{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("/upload/slider-1.jpg");
+	background-position: center;
+	background-size: cover;
 }

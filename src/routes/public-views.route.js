@@ -1,5 +1,6 @@
 const express = require("express");
 const {
+    renderLogin,
     renderHome,
     renderAbout,
     renderBlogs,
@@ -11,6 +12,7 @@ const {
 } = require("../controllers/public-views.controller");
 const router = express.Router();
 
+router.get("/login",renderLogin);
 router.get("/", renderHome);
 router.get("/about", renderAbout);
 router.get("/contact-us", renderContactUs);
