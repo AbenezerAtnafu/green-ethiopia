@@ -1,0 +1,46 @@
+<%- include('header') -%>
+<%- include('nav') -%>
+
+<div class=" h-100" id="background">
+    <div class="d-flex justify-content-center h-100">
+        <div class="user_card">
+            <div class="d-flex justify-content-center">
+                <div class="brand_logo_container">
+                    <img src="/images/logo.png" class="brand_logo" alt="Logo">
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center form_container">
+                <form action="">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                        </div>
+                        <input type="text" name="" class="form-control input_user" value="" placeholder="username"
+                            required>
+                    </div>
+                    <div class="input-group mb-2">
+                        <!-- //// -->
+                        <div class="justify-content-center">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                    <div class="input-group" id="show_hide_password">
+                                        <input class="input_pass" type="password" placeholder="password">
+                                        <div class="input-group-addon input-group-text input-group-password">
+                                            <a href=""><i class="fa fa-eye-slash" style="color: white;" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- ///// -->
+                    </div>
+                    <div class="d-flex justify-content-center mt-3 login_container">
+                        <button type="submit" name="button" class="btn login_btn">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('footer') %>
