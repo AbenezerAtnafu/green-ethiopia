@@ -13,9 +13,11 @@ const flash = require("connect-flash");
 
 dotenv.config();
 
-const db = require ("./models");
+const db = require("./models");
 const AppError = require("./utils/AppError");
-const { errorHandler } = require("./controllers/error.controller");
+const {
+  errorHandler
+} = require("./controllers/error.controller");
 
 const publicViewsRouter = require("./routes/public-views.route")
 const blogRouter = require("./routes/blog.route");
@@ -24,10 +26,13 @@ const adminRouter = require("./routes/admin-veiws.route");
 
 db.sequelize.sync().then(() => {
   console.log(chalk.cyan("Connected to database"));
-  db.users.findOne({ where: { email: "super@mesob.com" } }).then((user) => {
+  db.users.findOne({
+    where: {
+      email: "super@green.com"
+    }
+  }).then((user) => {
     if (!user) {
-      db.users.bulkCreate([
-        {
+      db.users.bulkCreate([{
           name: "Administrator",
           email: "admin@green.com",
           password: "admin@green123",
@@ -44,7 +49,7 @@ db.sequelize.sync().then(() => {
 
 const app = express();
 
-if(process.env.NODE_ENV==='development'){
+if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
 }
 app.use(cors());
@@ -72,7 +77,9 @@ app.use((req, res, next) => {
 // app.use(compression())
 app.use(express.json("12kb"));
 app.use(express.static(path.join(__dirname, "../public")));
-app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
 app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
 

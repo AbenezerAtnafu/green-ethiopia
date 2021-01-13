@@ -1,0 +1,17 @@
+{
+    "cookie": {
+        "originalMaxAge": 6000000,
+        "expires": "2021-01-13T22:18:31.161Z",
+        "httpOnly": true,
+        "path": "/"
+    },
+    "user": {
+        "id": 1,
+        "name": "Administrator",
+        "email": "admin@green.com",
+        "password": "$2b$10$h5ZQRNpFAlcLzV4XRb0laem47/flQBcYmmJhPaQs/NiaCAtWVVbly",
+        "createdAt": "2021-01-13T13:51:34.000Z",
+        "updatedAt": "2021-01-13T13:51:34.000Z"
+    },
+    "__lastAccess": 1610570311164
+}

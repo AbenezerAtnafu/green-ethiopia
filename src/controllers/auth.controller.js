@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const { promisify } = require("util");
 const bcrypt = require("bcryptjs");
 
-const User = require("../models").User;
+const User = require("../models").users;
 const AppError = require("../utils/AppError");
 const { catchAsync } = require("./error.controller");
 
