@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "semere62716",
+=======
+    "password": "root",
+>>>>>>> a1c8d173ffd290d255e52bf854f92e7e626585dd
     "database": "green_ethiopia",
     "host": "127.0.0.1",
     "dialect": "mysql"

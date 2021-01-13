@@ -66,8 +66,7 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .wp-caption.alignright { margin: 5px 0 20px 20px; }
 .wp-caption img { border: 0 none; height: auto; margin: 0; max-width: 98.5%; padding: 0; width: auto; }
 .wp-caption p.wp-caption-text { font-size: 11px; line-height: 17px; margin: 0; padding: 0 4px 5px; }
-.sticky{}
-.bypostauthor{}
+
 dl { width:100%; overflow:hidden; }
 dt { float:left; width: 30%; clear: left; margin-bottom: 12px; }
 dd { float:left; width: 70%; margin-bottom: 15px; }
@@ -117,6 +116,14 @@ h1, h2, h3, h4, h5, h6 { line-height: 1.3; margin-bottom: 18px; font-weight: 400
 .eleven { width: 91.667%; }
 .twelve{ width: 100%; }
 
+a:active{
+	
+	background-color: green;
+	position: absolute;
+	bottom: 0px;
+	height: 3px;
+	
+}
 .ie7 .sf-mega-section.three{ width: 24%; }
 
 .greennature-item{ margin: 0px 15px 20px; min-height: 1px; }
@@ -232,7 +239,6 @@ html .woocommerce .greennature-widget-title { font-size: 12px; }
 .greennature-fixed-header .greennature-navigation-wrapper .greennature-main-menu > li > a { font-size: 12px; padding-bottom: 23px; }
 .admin-bar .greennature-fixed-header{ top: 32px }
 
-.greennature-navigation-gimmick{ position: absolute; bottom: 0px; height: 3px; }
 .greennature-navigation-wrapper{ margin: 0px 15px; float: right; }
 .greennature-navigation-wrapper .greennature-navigation-container{ position: relative; line-height: 0; }
 .greennature-navigation-wrapper .greennature-main-menu > li{ padding: 0px; }
@@ -569,13 +575,13 @@ input[type="submit"], input[type="button"]{ -webkit-appearance: none; }
 .greennature-box-with-icon-item.pos-left > i{ float: left; margin: 5px 25px 0px 0px; }
 
 .greennature-box-with-icon-item.type-circle .box-with-circle-icon{ padding: 18px; display: inline-block; 
-	width: 22px; text-align: center; line-height: 22px;
+	width: 62px; text-align: center; line-height: 12px;
 	position: absolute; -moz-border-radius: 30px; -webkit-border-radius: 30px; border-radius: 30px; }
 .greennature-box-with-icon-item.type-circle .box-with-circle-icon > i{ font-size: 22px; margin-right: 0; }	
 .greennature-box-with-icon-item.type-circle.pos-top{ padding-top: 50px; }
-.greennature-box-with-icon-item.type-circle.pos-top .box-with-circle-icon{ top: -30px; left: 50%; margin-left: -30px; }
+.greennature-box-with-icon-item.type-circle.pos-top .box-with-circle-icon{ top: -10px; left: 50%; margin-left: -30px;}
 .greennature-box-with-icon-item.type-circle.pos-left{ margin-left: 40px; padding-left: 50px; }
-.greennature-box-with-icon-item.type-circle.pos-left .box-with-circle-icon{ left: -30px; top: 50%; margin-top: -30px; }
+.greennature-box-with-icon-item.type-circle.pos-left .box-with-circle-icon{ left: -30px; top: 50%; margin-top: -30px;padding: 10%; }
 
 /*-- icon --*/
 i.greennature-icon { margin-right: 10px; }
@@ -1386,7 +1392,7 @@ ul.greennature-twitter-widget{ list-style: none; margin-left: 0px; }
 ul.greennature-twitter-widget li{ margin-bottom: 20px; border-bottom-width: 1px; border-bottom-style: solid; }
 ul.greennature-twitter-widget li:before{ font-size: 19px; line-height: 24px; float: left; margin-right: 20px;
 margin-top: 2px; font-family: FontAwesome; 
-	content: '\f099'; *zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf099;'); }
+	content: '\f099'; *zoom:expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf099;'); 
 ul.greennature-twitter-widget li .greennature-twitter{ margin-bottom: 20px; overflow: hidden; }
 
 /*--- recent port 2 widget ---*/
@@ -1860,4 +1866,7 @@ right: 10px;
 
 .input-group-append{
 	border-radius: 0;
+}
+.active a{
+	color: #000;
 }
